@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;" *ngFor="let music of musics">
+    <img src="{{music.artworkUrl100}}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{music.trackCensoredName}}</h5>
+      <p class="card-text">Price: {{music.collectionPrice}} {{music.currency}}</p>
+      <a href="#" class="btn btn-primary">More details</a>
+    </div>
+  </div>
+
