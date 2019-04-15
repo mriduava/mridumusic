@@ -16,7 +16,7 @@ export class AlbumComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(album => {
       console.log(album);
-      this.albumShow.getMusic().subscribe((album: any) => {
+      this.albumShow.getMusic(album.music).subscribe((album: any) => {
         this.musicAlbums = album.results;
         console.log(this.musicAlbums);
       });

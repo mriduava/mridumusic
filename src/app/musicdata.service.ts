@@ -9,7 +9,7 @@ export class MusicdataService {
 
   constructor(private musicconnect: HttpClient) { }
 
-  getMusic(artist = 'jennifer_lopez') {
+  getMusic(artist: string) {
     return this.musicconnect.get(`https://itunes.apple.com/search?term=${artist}&entity=musicVideo`)
   }
 }

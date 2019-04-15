@@ -7,7 +7,7 @@ import { AlbumComponent } from './album/album.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: ':music', component: MusicComponent },
-  { path: ':music/:album', component: AlbumComponent }
+  { path: 'music/:album', component: AlbumComponent }
 ];
 
 @NgModule({
