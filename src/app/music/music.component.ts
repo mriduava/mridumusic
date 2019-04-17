@@ -15,10 +15,10 @@ export class MusicComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(artist => {
-      console.log(artist);
+      // console.log(artist);
       this.musicData.getMusic(artist.music).subscribe(( source: any) => {
       this.musics = source.results;
-      console.log(this.musics);
+      // console.log(this.musics);
     });
   });
   }

@@ -7,7 +7,6 @@ import { NavComponent } from './nav/nav.component';
 import { MusicComponent } from './music/music.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AlbumComponent } from './album/album.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -15,8 +14,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavComponent,
     MusicComponent,
-    HomeComponent,
-    AlbumComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

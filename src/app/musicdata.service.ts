@@ -7,9 +7,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MusicdataService {
 
-  constructor(private musicconnect: HttpClient) { }
+  constructor(private musicConnect: HttpClient) { }
 
   getMusic(artist: string) {
-    return this.musicconnect.get(`https://itunes.apple.com/search?term=${artist}&entity=musicVideo`)
+    return this.musicConnect.get(`https://itunes.apple.com/search?term=${artist}&entity=musicVideo`)
   }
 }
