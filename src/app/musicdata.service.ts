@@ -12,4 +12,8 @@ export class MusicdataService {
   getMusic(artist: string) {
     return this.musicConnect.get(`https://itunes.apple.com/search?term=${artist}&entity=musicVideo`)
   }
+
+  getMore(trackId: string) {
+    return this.musicConnect.get(`https://itunes.apple.com/search?term=${trackId}&entity=musicVideo`)
+  }
 }

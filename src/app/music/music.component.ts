@@ -1,13 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MusicdataService } from '../musicdata.service';
 import { ActivatedRoute } from '@angular/router';
+import { trigger, transition, style, animate, state } from '@angular/animations';
 
 @Component({
   selector: 'app-music',
   templateUrl: './music.component.html',
-  styleUrls: ['./music.component.scss']
+  styleUrls: ['./music.component.scss'],
+  animations: [
+    trigger('fade', [
+      transition('void =>*', [
+        style({opacity:0}),
+        animate(1000)
+      ])
+    ])
+  ]
 })
 export class MusicComponent implements OnInit {
+
+  @Input() input: string;
 
   musics = [];
 
@@ -18,7 +29,7 @@ export class MusicComponent implements OnInit {
       // console.log(artist);
       this.musicData.getMusic(artist.music).subscribe(( source: any) => {
       this.musics = source.results;
-      // console.log(this.musics);
+      console.log(this.musics);
     });
   });
   }

@@ -8,19 +8,25 @@ import { MusicComponent } from './music/music.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MoreComponent } from './more/more.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     MusicComponent,
-    HomeComponent
+    HomeComponent,
+    MoreComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

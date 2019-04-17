@@ -16,16 +16,18 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   ]
 })
 export class HomeComponent implements OnInit {
-  inputValue = '';
-  private artistName = this.inputValue;
-
+  // inputValue = '';
+  
   constructor(private route: Router) { }
 
   ngOnInit() {
   }
 
   submit(input: string) {
-    this.route.navigate([input]);
+    this.route.navigate([input]);    
   }
+
+  
+  
 
 }

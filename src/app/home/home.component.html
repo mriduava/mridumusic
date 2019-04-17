@@ -1,13 +1,14 @@
 
-<div class="container mt-5" >
-    
-    <h3 [@fade] class="text-center text-warning">Search music videos</h3>
+<div class="container mt-5" >    
+    <h3 [@fade] class="text-center text-warning">Search imusic videos</h3>
 	<form class="row d-flex justify-content-center"(ngSubmit)="submit(input)">
 	    <div class="col-lg-6">
-          <div class="input-group">
+          <div [@fade] class="input-group">
               <input type="text" class="search-query form-control" [(ngModel)]="input" name="artistName" placeholder="Artist name..." required/>
               <button id="btn_submit" type="submit">Search</button>
           </div>
       </div>
 	</form>
 </div>
+
+<h5>{{input}} </h5>

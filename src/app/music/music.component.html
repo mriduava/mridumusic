@@ -1,15 +1,15 @@
- <div class="container mt-3" *ngIf="musics?.length; then loading; else notFound">
-   <h4 class="text-center text-light">Artist: </h4>
+ <div [@fade] class="container mt-3" *ngIf="musics?.length; else notFound">
+   <h4 class="text-center text-light pt-4">{{musics?.length}} items found!</h4>
    <div class="row p-3">
      <div class="col-md-4 p-3" *ngFor="let music of musics">
-        <div class="card flex-row flex-wrap p-3">
+        <div [@fade] class="card flex-row flex-wrap p-3">
             <div class="card-header border-0">
                 <img src="{{music.artworkUrl100}}" class="card-img-top">
             </div>
             <div class="card-block px-2">
                 <h5 class="card-title">{{music.trackCensoredName | slice: 0: 13}}</h5>
                 <p class="card-text">Price: {{music.collectionPrice}} {{music.currency}}</p>
-                <a [href]="music.trackViewUrl" target="_blank" class="btn btn-outline-info btn-sm">More details</a>
+                <a [routerLink]="['/music', music.trackId]" class="btn btn-outline-info btn-sm">More details</a>
             </div> 
         </div>
      </div>
@@ -21,7 +21,7 @@
   </ng-template>
 
  <ng-template #notFound>
-   <h2 class="text-center mt-5 pt-5 text-danger">Sorry, not found... :(</h2>
+   <h2 [@fade] class="text-center mt-5 pt-5 text-danger">Sorry, not found... :(</h2>
  </ng-template>
 
 
