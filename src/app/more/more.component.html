@@ -9,13 +9,13 @@
                <h5 class="card-title">{{more.trackCensoredName}}</h5>
                <h5 class="text-warning">Artist: {{more.artistName}}</h5>
                <p class="card-text">Price: {{more.collectionPrice}} {{more.currency}}</p>
-               
-           </div> 
+
+           </div>
            <div class="card-block pl-lg-5 ml-lg-5">
              <p>Kind: {{more.kind}}</p>
              <p>Genre: {{more.primaryGenreName}}</p>
              <p>Duration: {{more.trackTimeMillis}} ms</p>
-             <a [href]="more.previewUrl" target="_blank" class="btn btn-outline-warning btn-sm">Music Preview</a>
+             <a [href]="more.trackViewUrl" target="_blank" class="btn btn-outline-warning btn-sm">Music Preview</a>
            </div>
        </div>
     </div>

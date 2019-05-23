@@ -10,7 +10,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   animations: [
     trigger('fade', [
       transition('void =>*', [
-        style({opacity:0}),
+        style({opacity: 0}),
         animate(1000)
       ])
     ])

@@ -10,15 +10,15 @@
                 <h5 class="card-title">{{music.trackCensoredName | slice: 0: 13}}</h5>
                 <p class="card-text">Price: {{music.collectionPrice}} {{music.currency}}</p>
                 <a [routerLink]="['/music', music.trackId]" class="btn btn-outline-info btn-sm">More details</a>
-            </div> 
+            </div>
         </div>
      </div>
    </div>
  </div>
-
+<!--
  <ng-template #loading>
     <h2 class="text-center mt-5 pt-5 text-danger">Wait please ...</h2>
-  </ng-template>
+  </ng-template> -->
 
  <ng-template #notFound>
    <h2 [@fade] class="text-center mt-5 pt-5 text-danger">Sorry, not found... :(</h2>
